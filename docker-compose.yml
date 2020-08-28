@@ -1,0 +1,10 @@
+version: "3.4"
+services:
+  riemann:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    network_mode: host
+    command: "bin/riemann etc/riemann.config"
+    volumes:
+      - "./config/riemann.config:/etc/riemann.config"
