@@ -7,4 +7,7 @@ services:
     network_mode: host
     command: "bin/riemann etc/riemann.config"
     volumes:
-      - "./config/riemann.config:/etc/riemann.config"
+      - "./config/riemann.config:/riemann-0.3.5/etc/riemann.config"
+    ports:
+      - "5555:5555"
+      - "4567:4567"
